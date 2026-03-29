@@ -19,3 +19,7 @@ from sklearn.metrics import (
 
 # Load Dataset
 dataset = pd.read_csv("water_potability.csv")
+
+# Separate Features and Target
+features = dataset.drop(columns=["Potability"])
+target = dataset["Potability"]
