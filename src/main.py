@@ -40,3 +40,9 @@ pipeline = Pipeline([
     ("svm", SVC(probability=True, class_weight="balanced", random_state=42))
 ])
 
+# Hyperparameter Grid
+param_grid = {
+    "svm__C": [0.1, 1, 10, 50],
+    "svm__gamma": ["scale", 0.1, 0.01],
+    "svm__kernel": ["rbf"]
+}
