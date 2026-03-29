@@ -76,3 +76,10 @@ for threshold in np.arange(0.1, 0.9, 0.01):
 
 # Final predictions using threshold
 final_predicted_labels = (predicted_probabilities >= best_threshold).astype(int)
+
+# Evaluation Metrics
+model_accuracy = accuracy_score(target_test, final_predicted_labels)
+model_precision = precision_score(target_test, final_predicted_labels)
+model_recall = recall_score(target_test, final_predicted_labels)
+model_f1_score = f1_score(target_test, final_predicted_labels)
+model_roc_auc = roc_auc_score(target_test, predicted_probabilities)
