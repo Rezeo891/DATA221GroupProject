@@ -58,3 +58,7 @@ grid_search = GridSearchCV(
 
 grid_search.fit(features_train, target_train)
 best_model = grid_search.best_estimator_
+
+# Probabilities for threshold
+predicted_probabilities = best_model.predict_proba(features_test)[:, 1]
+
