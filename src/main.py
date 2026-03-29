@@ -39,3 +39,4 @@ pipeline = Pipeline([
     ("scaler", StandardScaler()),
     ("svm", SVC(probability=True, class_weight="balanced", random_state=42))
 ])
+
