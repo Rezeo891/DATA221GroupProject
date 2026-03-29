@@ -91,3 +91,8 @@ print(f"Precision: {model_precision:.4f}")
 print(f"Recall: {model_recall:.4f}")
 print(f"F1 Score: {model_f1_score:.4f}")
 print(f"ROC-AUC: {model_roc_auc:.4f}")
+
+# Confusion Matrix
+confusion_matrix_result = confusion_matrix(target_test, final_predicted_labels)
+print("Confusion Matrix:")
+print(confusion_matrix_result)
