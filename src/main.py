@@ -23,3 +23,12 @@ dataset = pd.read_csv("water_potability.csv")
 # Separate Features and Target
 features = dataset.drop(columns=["Potability"])
 target = dataset["Potability"]
+
+# Train Test Split
+features_train, features_test, target_train, target_test = train_test_split(
+    features,
+    target,
+    test_size=0.2,
+    random_state=42,
+    stratify=target
+)
