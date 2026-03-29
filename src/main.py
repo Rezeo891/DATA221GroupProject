@@ -32,3 +32,10 @@ features_train, features_test, target_train, target_test = train_test_split(
     random_state=42,
     stratify=target
 )
+
+# Median Imputation + Scaling + SVM
+pipeline = Pipeline([
+    ("imputer", SimpleImputer(strategy="median")),
+    ("scaler", StandardScaler()),
+    ("svm", SVC(probability=True, class_weight="balanced", random_state=42))
+])
