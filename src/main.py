@@ -83,3 +83,11 @@ model_precision = precision_score(target_test, final_predicted_labels)
 model_recall = recall_score(target_test, final_predicted_labels)
 model_f1_score = f1_score(target_test, final_predicted_labels)
 model_roc_auc = roc_auc_score(target_test, predicted_probabilities)
+
+# Print Statements
+print("Support Vector Machine Performance")
+print(f"Accuracy: {model_accuracy:.4f}")
+print(f"Precision: {model_precision:.4f}")
+print(f"Recall: {model_recall:.4f}")
+print(f"F1 Score: {model_f1_score:.4f}")
+print(f"ROC-AUC: {model_roc_auc:.4f}")
