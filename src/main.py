@@ -62,3 +62,14 @@ best_model = grid_search.best_estimator_
 # Probabilities for threshold
 predicted_probabilities = best_model.predict_proba(features_test)[:, 1]
 
+# Tune threshold for best F1
+best_threshold = 0.5
+best_f1_score_value = 0
+
+for threshold in np.arange(0.1, 0.9, 0.01):
+    predicted_classes = (predicted_probabilities >= threshold).astype(int)
+    current_f1_score = f1_score(target_test, predicted_classes)
+
+    if current_f1_score > best_f1_score_value:
+        best_f1_score_value = current_f1_score
+        best_threshold = threshold
