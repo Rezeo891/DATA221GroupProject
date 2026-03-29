@@ -73,3 +73,6 @@ for threshold in np.arange(0.1, 0.9, 0.01):
     if current_f1_score > best_f1_score_value:
         best_f1_score_value = current_f1_score
         best_threshold = threshold
+
+# Final predictions using threshold
+final_predicted_labels = (predicted_probabilities >= best_threshold).astype(int)
