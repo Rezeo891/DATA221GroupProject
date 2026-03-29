@@ -46,3 +46,15 @@ param_grid = {
     "svm__gamma": ["scale", 0.1, 0.01],
     "svm__kernel": ["rbf"]
 }
+
+# Grid Search to optimize F1
+grid_search = GridSearchCV(
+    pipeline,
+    param_grid,
+    cv=5,
+    scoring="f1",
+    n_jobs=-1
+)
+
+grid_search.fit(features_train, target_train)
+best_model = grid_search.best_estimator_
