@@ -16,3 +16,6 @@ from sklearn.metrics import (
     roc_auc_score,
     confusion_matrix
 )
+
+# Load Dataset
+dataset = pd.read_csv("water_potability.csv")
