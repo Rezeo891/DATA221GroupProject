@@ -96,3 +96,19 @@ print(f"ROC-AUC: {model_roc_auc:.4f}")
 confusion_matrix_result = confusion_matrix(target_test, final_predicted_labels)
 print("Confusion Matrix:")
 print(confusion_matrix_result)
+
+# ROC Curve Plotting
+false_positive_rate, true_positive_rate, threshold_values = roc_curve(
+    target_test,
+    predicted_probabilities
+)
+
+plt.figure()
+plt.plot(false_positive_rate, true_positive_rate, label=f"SVM (AUC = {model_roc_auc:.3f})")
+plt.plot([0, 1], [0, 1], linestyle="--")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curve Support Vector Machine")
+plt.legend(loc="lower right")
+plt.grid()
+plt.show()
