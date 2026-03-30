@@ -15,5 +15,5 @@ def run_decision_tree():
     return results
 
 
-if name == "main":
+if __name__ == "__main__":
     run_decision_tree()
