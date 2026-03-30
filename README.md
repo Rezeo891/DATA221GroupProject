@@ -2,7 +2,7 @@
 
 ## Team Members
 - Lucas Zhang
-- Yiming(Alan) Wu
+- Alan(Yiming) Wu
 - Rudraksh Walia
 
 ## Dataset
