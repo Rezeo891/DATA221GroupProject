@@ -1,0 +1,48 @@
+=== Logistic Regression Results ===
+Accuracy: 0.6098
+Precision: 0.0000
+Recall: 0.0000
+F1-score: 0.0000
+ROC-AUC: 0.5481
+Confusion Matrix:
+[[400   0]
+ [256   0]]
+
+=== Decision Tree Results ===
+Accuracy: 0.5960
+Precision: 0.4813
+Recall: 0.4531
+F1-score: 0.4668
+ROC-AUC: 0.5703
+Confusion Matrix:
+[[275 125]
+ [140 116]]
+
+=== Random Forest Results ===
+Accuracy: 0.6631
+Precision: 0.6423
+Recall: 0.3086
+F1-score: 0.4169
+ROC-AUC: 0.6412
+Confusion Matrix:
+[[356  44]
+ [177  79]]
+Support Vector Machine Performance
+Accuracy: 0.5030
+Precision: 0.4347
+Recall: 0.9102
+F1 Score: 0.5884
+ROC-AUC: 0.6317
+Confusion Matrix:
+[[ 97 303]
+ [ 23 233]]
+
+=== Final Model Comparison Summary ===
+Logistic Regression: Accuracy=0.6098, Precision=0.0000, Recall=0.0000, F1-score=0.0000, ROC-AUC=0.5481
+Decision Tree: Accuracy=0.5960, Precision=0.4813, Recall=0.4531, F1-score=0.4668, ROC-AUC=0.5703
+Random Forest: Accuracy=0.6631, Precision=0.6423, Recall=0.3086, F1-score=0.4169, ROC-AUC=0.6412
+SVM: Accuracy=0.5030, Precision=0.4347, Recall=0.9102, F1-score=0.5884, ROC-AUC=0.6317
+
+Best model: Random Forest (accuracy)
+Best F1: SVM
+Logistic Regression failed due to imbalance
