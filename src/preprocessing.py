@@ -19,3 +19,8 @@ def load_and_preprocess():
         random_state=42,
         stratify=y
     )
+
+    # Fill missing values using median
+    imputer = SimpleImputer(strategy="median")
+    X_train = imputer.fit_transform(X_train)
+    X_test = imputer.transform(X_test)
