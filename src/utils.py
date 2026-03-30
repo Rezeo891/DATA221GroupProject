@@ -18,3 +18,13 @@ def evaluate_model(model, X_test, y_test):
     }
 
     return results
+
+def print_results(model_name, results):
+    print(f"\n=== {model_name} Results ===")
+    print(f"Accuracy: {results['Accuracy']:.4f}")
+    print(f"Precision: {results['Precision']:.4f}")
+    print(f"Recall: {results['Recall']:.4f}")
+    print(f"F1-score: {results['F1-score']:.4f}")
+    print(f"ROC-AUC: {results['ROC-AUC']:.4f}")
+    print("Confusion Matrix:")
+    print(results["Confusion Matrix"])
