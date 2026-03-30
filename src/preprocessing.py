@@ -24,3 +24,10 @@ def load_and_preprocess():
     imputer = SimpleImputer(strategy="median")
     X_train = imputer.fit_transform(X_train)
     X_test = imputer.transform(X_test)
+
+    # Scale features
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+
+    return X_train, X_test, y_train, y_test
